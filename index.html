@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="dino" src="dino/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <a-plane
+        position="0 0 0"
+        rotation="-90 0 0"
+        width="4"
+        height="2"
+        material="src: rennstrecke.png; transparent: false; alphaTest: 0.5"
+      ></a-plane>
+      <a-entity
+        geometry="primitive: plane"
+        material="src: rennstrecke.png"
+      ></a-entity>
+      <a-sky color="#ECECEC"></a-sky>
+
+      <a-entity position="0 0 0" scale="0.001 0.001 0.001">
+        <a-entity gltf-model="#dino" animation-mixer></a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
